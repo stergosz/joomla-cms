@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="contenttype">
+        <fields name="service">
+            <field name="headline" type="map"
+                label="NR_TITLE"
+                description="GSD_SERVICE_TITLE_DESC"
+                hint="Service title"
+                default="gsd.item.headline"
+                custom_class="input-xlarge"
+                required="true"
+            />
+            <field name="description" type="map"
+                label="GSD_ITEM_DESC"
+                description="GSD_SERVICE_DESCRIPTION"
+                default="gsd.item.description"
+                custom_class="input-xlarge"
+            />
+            <field name="image" type="mapimage"
+                label="NR_IMAGE"
+                description="GSD_SERVICE_IMAGE_DESC"
+                default="gsd.item.image"
+            />
+            <field type="spacer" name="label" label="GSD_SERVICE_PRICE_HEADING" />
+            <field name="offerPrice" type="map"
+                label="GSD_PRODUCT_OFFER_PRICE"
+                description="GSD_SERVICE_OFFER_PRICE_DESC"
+                hint="29.50"
+                default="gsd.item.offerprice"
+            />
+            <field name="currency" type="map"
+                label="GSD_PRODUCT_OFFER_CURRENCY"
+                description="GSD_PRODUCT_OFFER_CURRENCY_DESC"
+                hint="USD"
+                default="gsd.item.currency">
+                <subform>
+                    <field name="fixed" type="nr_currencies"
+                        showon="option:fixed"
+                        showselect="false"
+                    />
+                </subform>
+            </field>
+            <field type="spacer" name="label2" label="GSD_SERVICE_PROVIDER_HEADING" />
+            <field name="provider_type" type="list" 
+                label="GSD_TYPE" 
+                description="GSD_SERVICE_PROVIDER_TYPE_DESC"
+                default="Organization">
+                    <option value="Organization">GSD_ORGANIZATION</option>
+                    <option value="Person">GSD_PERSON</option>
+            </field>
+            <field name="provider_name" type="map"
+                label="NR_NAME"
+                description="GSD_SERVICE_PROVIDER_NAME_DESC"
+                hint=""
+                custom_class="input-xlarge"
+            />
+            <field name="provider_image" type="mapimage"
+                label="NR_IMAGE"
+                description="GSD_SERVICE_PROVIDER_IMAGE_DESC"
+            />
+            <field name="provider_phone" type="map"
+                label="GSD_PHONE"
+                description="GSD_SERVICE_PHONE_DESC"
+                hint="GSD_BUSINESSLISTING_TELEPHONE_HINT"
+            />
+            <field name="provider_country" type="map"
+                label="NR_ASSIGN_COUNTRIES"
+                description="GSD_SERVICE_COUNTRY_DESC"
+                hint="US">
+                <subform>
+                    <field name="fixed" type="nr_geo"
+                        showon="option:fixed"
+                        showselect="false"
+                    />
+                </subform>
+            </field>
+            <field name="provider_city" type="map"
+                label="NR_CITY"
+                description="GSD_SERVICE_CITY_DESC"
+                hint="Athens"
+            />
+            <field name="provider_streetAddress" type="map"
+                label="GSD_BUSINESSLISTING_STREET_ADDRESS"
+                description="GSD_SERVICE_STREET_ADDRESS_DESC"
+                hint="GSD_BUSINESSLISTING_STREET_ADDRESS_HINT"
+            />
+            <field name="provider_addressRegion" type="map"
+                label="GSD_BUSINESSLISTING_ADDRESS_REGION"
+                description="GSD_SERVICE_REGION_DESC"
+                hint="GSD_BUSINESSLISTING_ADDRESS_REGION_HINT"
+            />
+            <field name="provider_postalCode" type="map"
+                label="GSD_BUSINESSLISTING_POSTAL_CODE"
+                description="GSD_SERVICE_POSTALCODE_DESC"
+                hint="GSD_BUSINESSLISTING_POSTAL_CODE_HINT"
+            />
+        </fields>
+    </fieldset>
+</form>

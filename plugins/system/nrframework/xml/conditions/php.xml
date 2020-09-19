@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general">
+        <field name="match" type="comparator"/>
+        <field name="value" type="textarea" 
+            label="NR_PHPCODE" 
+            description="NR_ASSIGN_PHP_DESC2"
+            filter="raw"
+            class="span12 input-full"
+            rows="10"
+            hint="return ($some_variable == 'some value');"
+        />
+    </fieldset>
+</form>

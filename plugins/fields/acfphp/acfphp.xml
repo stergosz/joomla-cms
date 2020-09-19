@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="plugin" version="3.7.0" group="fields" method="upgrade">
+	<name>ACF_PHP</name>
+	<description>ACF_PHP_DESC</description>
+	<author>Tassos Marinos</author>
+	<creationDate>May 2019</creationDate>
+	<copyright>Copyright (C) 2017 Tassos Marinos. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>info@tassos.gr</authorEmail>
+	<authorUrl>www.tassos.gr</authorUrl>
+	<version>1.0</version>
+	<scriptfile>script.install.php</scriptfile>
+	<files>
+		<filename plugin="acfphp">acfphp.php</filename>
+		<filename>script.install.helper.php</filename>
+		<filename>version.php</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+		<folder>params</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="forbidden_php_functions" type="textarea" 
+					label="ACF_PHP_FORBIDDEN_PHP_FUNCTIONS"
+					description="ACF_PHP_FORBIDDEN_PHP_FUNCTIONS_DESC"
+					default="fopen, popen, unlink, rmdir, dl, escapeshellarg, escapeshellcmd, exec, passthru, proc_close, proc_open, shell_exec, symlink, system, pcntl_exec, eval, create_function"
+					rows="5"
+					class="span6"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

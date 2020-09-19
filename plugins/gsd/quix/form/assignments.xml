@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="assignments">
+		<fieldset name="article">
+			<fields name="quixsingle">
+				<field name="assignment_state" type="assignmentselection" 
+					label="NR_PAGE"
+					description="PLG_GSD_QUIX_ASSIGN_ITEM_DESC"
+				/>
+				<field name="selection" type="componentitems" 
+					label="NR_SELECTION" 
+					description="PLG_GSD_QUIX_ASSIGN_ITEM_SELECT_DESC"
+					multiple="true"
+					table="quix"
+					column_state="state"
+					where="i.state > 0"
+				/>
+        	</fields>
+    	</fieldset>
+	</fields>
+</form>

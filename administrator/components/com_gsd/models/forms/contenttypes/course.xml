@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="contenttype">
+        <fields name="course">
+            <field name="headline" type="map"
+                label="NR_TITLE"
+                description="GSD_COURSE_TITLE_DESC"
+                hint="Mathematics 101"
+                default="gsd.item.headline"
+                custom_class="input-xlarge"
+                required="true"
+            />
+            <field name="description" type="map"
+                label="GSD_ITEM_DESC"
+                description="GSD_ITEM_DESC_DESC"
+                custom_class="input-xlarge"
+                default="gsd.item.description"
+                required="true"
+            />
+            <field name="start_date" type="mapdate"
+                label="GSD_EVENT_START_DATE"
+                description="GSD_COURSE_START_DATE_DESC"
+                required="true"
+            />
+            <field name="end_date" type="mapdate"
+                label="GSD_EVENT_END_DATE"
+                description="GSD_COURSE_END_DATE_DESC"
+            />  
+            <field name="course_mode" type="map"
+                label="GSD_COURSE_MODE"
+                description="GSD_COURSE_MODE_DESC">
+                <subform>
+                    <field name="fixed" type="list"
+                        showon="option:fixed"
+                        multiple="true">
+                        <option value="online">Online</option>
+                        <option value="onsite">Onsite</option>
+                        <option value="blended">Blended</option>
+                        <option value="synchronous">Synchronous</option>
+                        <option value="asynchronous">Asynchronous</option>
+                        <option value="full-time">Full-time</option>
+                        <option value="part-time">Part-time</option>
+                    </field>
+                </subform>
+            </field>
+            <field name="image" type="mapimage"
+                label="NR_IMAGE"
+                description="GSD_IMAGE_OPTION_DESC"
+                default="gsd.item.image"
+            />
+            <field name="course_code" type="map"
+                label="GSD_COURSE_CODE"
+                description="GSD_COURSE_CODE_DESC"
+            />
+            <field type="spacer" name="label3" label="Place / Address" />
+            <field name="place_name" type="map"
+                label="GSD_COURSE_PLACE_NAME"
+                description="GSD_COURSE_PLACE_NAME_DESC"
+            />
+            <field name="country" type="map"
+                label="GSD_JOBPOSTING_COUNTRY"
+                description="GSD_COURSE_COUNTRY_DESC"
+                hint="US"
+                required="true">
+                <subform>
+                    <field name="fixed" type="nr_geo"
+                        showon="option:fixed"
+                        showselect="false"
+                    />
+                </subform>
+            </field>
+            <field name="address" type="map"
+                label="GSD_JOBPOSTING_ADDRESS"
+                description="GSD_COURSE_ADDRESS_DESC"
+                hint="555 Clancy St"
+                required="true"
+            />
+            <field name="locality" type="map"
+                label="GSD_JOBPOSTING_LOCALITY"
+                description="GSD_COURSE_LOCALITY_DESC"
+                hint="Mountain View"
+            />
+            <field name="region" type="map"
+                label="GSD_BUSINESSLISTING_ADDRESS_REGION"
+                description="GSD_COURSE_REGION_DESC"
+                hint="MI"
+            />
+            <field name="postal_code" type="map"
+                label="GSD_BUSINESSLISTING_POSTAL_CODE"
+                description="GSD_COURSE_POSTA_CODE_DESC"
+                hint="48201"
+            />
+            <field type="spacer" name="label1" label="Price" />
+            <field name="price" type="map"
+                label="GSD_PRODUCT_OFFER_PRICE"
+                description="GSD_PRODUCT_OFFER_PRICE_DESC"
+                hint="29.50"
+            />
+            <field name="priceCurrency" type="map"
+                label="GSD_PRODUCT_OFFER_CURRENCY"
+                description="GSD_PRODUCT_OFFER_CURRENCY_DESC"
+                hint="USD">
+                <subform>
+                    <field name="fixed" type="nr_currencies"
+                        showon="option:fixed"
+                        showselect="false"
+                    />
+                </subform>
+            </field>
+            <field name="availability" type="map"
+                label="GSD_PRODUCT_AVAILABILITY"
+                description="GSD_PRODUCT_AVAILABILITY_DESC">
+                <subform>
+                    <field name="fixed" type="list"
+                        showon="option:fixed"
+                        default="http://schema.org/InStock">
+                        <option value="http://schema.org/Discontinued">GSD_AVAILABILITY_DISCONTINUED</option>
+                        <option value="http://schema.org/InStock">GSD_AVAILABILITY_IN_STOCK</option>
+                        <option value="http://schema.org/InStoreOnly">GSD_AVAILABILITY_INSTORE_ONLY</option>
+                        <option value="http://schema.org/LimitedAvailability">GSD_AVAILABILITY_LIMITED_AVAILABILITY</option>
+                        <option value="http://schema.org/OnlineOnly">GSD_AVAILABILITY_ONLINE_ONLY</option>
+                        <option value="http://schema.org/OutOfStock">GSD_AVAILABILITY_OUT_OF_STOCK</option>
+                        <option value="http://schema.org/PreOrder">GSD_AVAILABILITY_PRE_ORDER</option>
+                        <option value="http://schema.org/PreSale">GSD_AVAILABILITY_PRE_SALE</option>
+                        <option value="http://schema.org/SoldOut">GSD_AVAILABILITY_SOLDOUT</option>
+                    </field>
+                </subform>
+            </field>
+            <field name="validFrom" type="mapdate"
+                label="GSD_PRODUCT_PRICE_VALID_DATE_FROM"
+                description="GSD_PRODUCT_PRICE_VALID_DATE_FROM_DESC"
+            />
+            <field type="spacer" name="performer" label="Performer" />
+            <field name="performer_type" type="map"
+                label="GSD_COURSE_PERFORMER_TYPE"
+                description="GSD_COURSE_PERFORMER_TYPE_DESC">
+                <subform>
+                    <field name="fixed" type="list"
+                        showon="option:fixed"
+                        default="PerformingGroup">
+                        <option value="PerformingGroup">GSD_EVENT_PERFORMING_GROUP</option>
+                        <option value="Organization">GSD_ORGANIZATION</option>
+                        <option value="Person">GSD_PERSON</option>
+                    </field>
+                </subform>
+            </field>
+            <field name="performer_name" type="map"
+                label="GSD_COURSE_PERFORMER_NAME"
+                description="GSD_COURSE_PERFORMER_NAME_DESC"
+                hint="John Doe"
+            />
+            <field type="spacer" name="rating" label="Rating" />
+            <field name="rating_value" type="map"
+                label="GSD_RATE_VALUE"
+                description="GSD_RATE_VALUE_DESC"
+                default="gsd.item.ratingValue">
+                <subform>
+                    <field name="custom" type="nr_rate"/>
+                </subform>
+            </field>
+            <field name="review_count" type="map"
+                label="GSD_REVIEW_COUNT"
+                description="GSD_REVIEW_COUNT_DESC"
+                default="gsd.item.reviewCount"
+                hint="5"
+            />
+            <field type="spacer" name="other" label="Other" />
+            <field name="publish_up" type="mapdate"
+                label="GSD_DATE_PUBLISHED"
+                description="GSD_DATE_PUBLISHED_DESC"
+                default="gsd.item.publish_up"
+            />
+            <field name="created" type="mapdate"
+                label="GSD_DATE_CREATED"
+                description="GSD_DATE_PUBLISHED_DESC"
+                default="gsd.item.created"
+            />
+            <field name="modified" type="mapdate"
+                label="GSD_DATE_MODIFIED"
+                description="GSD_DATE_MODIFIED_DESC"
+                default="gsd.item.modified"
+            />
+        </fields>
+    </fieldset>
+</form>

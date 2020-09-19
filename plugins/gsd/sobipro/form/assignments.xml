@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="assignments">
+        <!-- SobiPro Items -->
+        <fieldset name="single">
+            <fields name="sobiprosingle">
+                <field name="assignment_state" type="assignmentselection"
+                    label="NR_ASSIGN_ITEMS"
+                    description="PLG_GSD_SOBIPRO_ASSIGN_ITEM_DESC"
+                />
+                <field name="selection" type="componentitems"
+                    label="NR_SELECTION"
+                    description="PLG_GSD_SOBIPRO_ASSIGN_ITEM_SELECTION_DESC"
+                    multiple="true"
+					table="sobipro_object"
+					column_id="i.id"
+					column_title="f.baseData"
+					column_state="i.state"
+					join="#__sobipro_field_data as f ON i.id = f.sid"
+                    where="f.fid = 1"
+                />
+            </fields>         
+        </fieldset>
+        <!-- SobiPro Categories -->
+        <fieldset name="sobiprocategory">
+            <fields name="sobiprocategory">
+                <field name="assignment_state" type="assignmentselection"
+                    label="NR_CATEGORIES"
+                    description="PLG_GSD_SOBIPRO_ASSIGN_CATEGORY_DESC"
+                />
+                <field name="selection" type="nrsobiprocategories" 
+                    label="NR_SELECTION" 
+                    description="NR_ASSIGN_CATEGORY_DESC"
+                    group="categories" 
+                    multiple="true" 
+                />
+                <fields name="params">
+    	            <field name="inc_children" type="list"
+    	                label="NR_ALSO_ON_CHILD_ITEMS"
+    	                description="NR_ALSO_ON_CHILD_ITEMS_DESC"
+    	                class="input-medium"
+    	                default="0">
+    	                <option value="0">JNO</option>
+    	                <option value="1">JYES</option>
+    	                <option value="2">NR_ONLY</option>
+    	            </field>
+            	</fields>
+            </fields>
+        </fieldset>
+	</fields>
+</form>

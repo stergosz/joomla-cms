@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="fieldparams">
+		<fieldset name="fieldparams">
+			<field name="a" type="note" label="ACF_UPLOAD_FILE_UPLOAD_SETTINGS" />
+			<field name="upload_folder" type="text"
+				label="ACF_UPLOAD_FOLDER"
+				description="ACF_UPLOAD_FOLDER_DESC"
+				hint="media/acfupload"
+				default="media/acfupload"
+			/>
+			<field name="limit_files" type="number"
+				label="ACF_UPLOAD_LIMIT_FILES"
+				description="ACF_UPLOAD_LIMIT_FILES_DESC"
+				class="input-small"
+				default="1"
+				min="0"
+			/>
+			<field name="max_file_size" type="nrnumber"
+				label="ACF_UPLOAD_MAX_FILE_SIZE"
+				description="ACF_UPLOAD_MAX_FILE_SIZE_DESC"
+				class="input-small"
+				addon="MB"
+				min="0"
+				default="0"
+				hint="1"
+			/>
+			<field name="upload_types" type="text"
+				label="ACF_UPLOAD_TYPES"
+				description="ACF_UPLOAD_TYPES_DESC"
+				hint=".jpg, .png, .gif"
+				default=".jpg, .png, .gif"
+			/>
+			<field name="randomize_filename" type="nrtoggle"
+				label="ACF_UPLOAD_RANDOMIZE"
+				description="ACF_UPLOAD_RANDOMIZE_DESC"
+			/>
+			<field name="allow_unsafe" type="nrtoggle"
+				label="ACF_UPLOAD_ALLOW_UNSAFE"
+				description="ACF_UPLOAD_ALLOW_UNSAFE_DESC"
+			/>
+			<field name="show_download_links" type="nrtoggle"
+				label="ACF_UPLOAD_SHOW_DOWNLOAD_LINKS"
+				description="ACF_UPLOAD_SHOW_DOWNLOAD_LINKS_DESC"
+			/>
+			<field name="b" type="note" label="ACF_UPLOAD_FRONTEND_DISPLAY" />
+			<field name="layout" type="list" 
+		        label="ACF_UPLOAD_LAYOUT"
+				description="ACF_UPLOAD_LAYOUT_DESC"
+				default="link">
+				<option value="link">ACF_UPLOAD_LINK</option>
+				<option value="img">ACF_UPLOAD_IMAGE</option>
+				<option value="custom">ACF_UPLOAD_CUSTOM</option>
+			</field>
+			<field name="link_text" type="text" 
+		        label="ACF_UPLOAD_LINK_TEXT"
+				description="ACF_UPLOAD_LINK_TEXT_DESC"
+				hint="Download"
+				showon="layout:link"
+			/>
+			<field name="force_download" type="nrtoggle" 
+		        label="ACF_UPLOAD_FORCE_DOWNLOAD"
+				description="ACF_UPLOAD_FORCE_DOWNLOAD_DESC"
+				checked="true"
+				showon="layout:link"
+			/>
+			<field name="custom_layout" type="editor" 
+		        label="ACF_UPLOAD_CUSTOM_LAYOUT"
+				description="ACF_UPLOAD_CUSTOM_LAYOUT_DESC"
+				showon="layout:custom"
+				editor="codemirror|none"
+				class="span12"
+				filter="raw"
+				rows="5"
+				default='&lt;a download href="{file.url}" title="Click to download">Download {file.name}&lt;/a>'
+			/>
+		</fieldset>
+	</fields>
+</form>
+

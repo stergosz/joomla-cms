@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="assignments">
+		<!-- Event -->
+		<fieldset name="single">
+			<fields name="jcalprosingle">
+				<field name="assignment_state" type="assignmentselection" 
+					label="Event"
+					description="PLG_GSD_JCALPRO_ASSIGN_EVENT_DESC"
+				/>
+				<field name="selection" type="componentitems" 
+					label="NR_SELECTION" 
+					description="PLG_GSD_JCALPRO_ASSIGN_EVENT_SELECTION_DESC"
+					multiple="true"
+					table="jcalpro_events"
+					column_state="published"
+				/>
+        	</fields>
+    	</fieldset>
+		<!-- Category -->
+		<fieldset name="category">
+			<fields name="jcalprocategory">
+				<field name="assignment_state" type="assignmentselection"
+	                label="NR_CATEGORIES"
+	                description="PLG_GSD_JCALPRO_ASSIGN_CATEGORY_DESC"
+	            />
+	            <field name="selection" type="nrjcalprocategories" 
+	                label="NR_SELECTION" 
+	                description="NR_CATEGORIES_DESC"
+	                multiple="true" 
+	            />
+        	</fields>
+    	</fieldset>
+	</fields>
+</form>

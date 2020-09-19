@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="fieldparams">
+		<fieldset name="fieldparams">
+			<field name="size" type="radio" 
+		        label="ACF_VIDEO_SIZE"
+				description="ACF_VIDEO_SIZE_DESC"
+		        class="btn-group btn-group-yesno"
+		        default="fixed">
+		            <option value="fixed">ACF_FIXED</option>
+		            <option value="responsive">ACF_RESPONSIVE</option>
+		    </field>
+			<field name="width" type="text"
+				label="ACF_DAILYMOTION_WIDTH"
+				description="ACF_DAILYMOTION_WIDTH_DESC"
+				default="480"
+				showon="size:fixed"
+			/>
+			<field name="height" type="text"
+				label="ACF_DAILYMOTION_HEIGHT"
+				description="ACF_DAILYMOTION_HEIGHT_DESC"
+				default="270"
+				showon="size:fixed"
+			/>
+			
+			<field name="autoplay" type="nrtoggle" 
+		        label="ACF_DAILYMOTION_AUTOPLAY"
+				description="ACF_DAILYMOTION_AUTOPLAY_DESC"
+			/>
+			<field name="controls" type="nrtoggle"
+				label="ACF_DAILYMOTION_CONTROLS"
+				description="ACF_DAILYMOTION_CONTROLS_DESC"
+				checked="true"
+			/>
+			<field name="endscreen" type="nrtoggle"
+				label="ACF_DAILYMOTION_ENDSCREEN"
+				description="ACF_DAILYMOTION_ENDSCREEN_DESC"
+				checked="true"
+			/>
+			<field name="mute" type="nrtoggle"
+				label="ACF_DAILYMOTION_MUTE"
+				description="ACF_DAILYMOTION_MUTE_DESC"
+			/>
+			<field name="quality" type="list"
+				label="ACF_DAILYMOTION_QUALITY"
+				description="ACF_DAILYMOTION_QUALITY_DESC"
+				default="auto">
+				<option value="auto">ACF_DAILYMOTION_QUALITY_AUTO</option>
+				<option value="240">240</option>
+                <option value="380">380</option>
+                <option value="480">480</option>
+                <option value="720">720</option>
+                <option value="1080">1080</option>
+                <option value="1440">1440</option>
+                <option value="2160">2160</option>
+			</field>
+			<field name="sharing" type="nrtoggle"
+				label="ACF_DAILYMOTION_SHARING"
+				description="ACF_DAILYMOTION_SHARING_DESC"
+				checked="true"
+			/>
+			<field name="uiHighlight" type="nrcolor" 
+                label="ACF_DAILYMOTION_UIHIGHLIGHT"
+				description="ACF_DAILYMOTION_UIHIGHLIGHT_DESC"
+                default="#ffcc33"
+            />
+			<field name="uiLogo" type="nrtoggle"
+				label="ACF_DAILYMOTION_UILOGO"
+				description="ACF_DAILYMOTION_UILOGO_DESC"
+				checked="true"
+			/>
+			<field name="uiStartScreenInfo" type="nrtoggle"
+				label="ACF_DAILYMOTION_UISTARTSCREENINFO"
+				description="ACF_DAILYMOTION_UISTARTSCREENINFO_DESC"
+				checked="true"
+			/>
+			<field name="uiTheme" type="radio"
+				label="ACF_DAILYMOTION_UITHEME"
+				description="ACF_DAILYMOTION_UITHEME_DESC"
+				class="btn-group"
+				default="dark">
+				<option value="dark">ACF_DAILYMOTION_UITHEME_DARK</option>
+                <option value="light">ACF_DAILYMOTION_UITHEME_LIGHT</option>
+            </field>
+            
+            
+		</fieldset>
+	</fields>
+</form>

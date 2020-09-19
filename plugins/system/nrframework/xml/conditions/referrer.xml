@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general">
+        <field name="match" type="comparator"/>
+        <field name="value" type="textarea" 
+            label="NR_ASSIGN_REFERRER" 
+            description="NR_ASSIGN_REFERRER_DESC"
+            class="span12 input-full"
+            rows="5"
+            hint="www.facebook.com"
+        />
+    </fieldset>
+</form>

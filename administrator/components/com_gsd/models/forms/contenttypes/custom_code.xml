@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="contenttype">
+        <fields name="custom_code">
+            <field name="custom_code" type="textarea"
+                label="GSD_CUSTOM_CODE"
+                description="GSD_CUSTOM_CODE_DESC"
+                class="span12"
+                rows="16"
+                filter="raw"
+                hint="&lt;script type='application/ld+json'&gt;&lt;/script&gt;"
+            />
+        </fields>
+        <field name="customcode_disclaimer" type="note" 
+            class="alert alert-error"
+            description="GSD_CUSTOM_CODE_DISCLAIMER"
+        />     
+    </fieldset>
+</form>

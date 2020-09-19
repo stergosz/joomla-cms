@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general">
+        <field name="match" type="comparator"/>
+        <field name="value" type="text"
+            label="NR_ASSIGN_COOKIENAME_NAME"
+            description="NR_ASSIGN_COOKIENAME_NAME_DESC"
+            hint="NR_ASSIGN_COOKIENAME_NAME"
+            class="input-xlarge"
+        />
+        <fields name="params">
+            <field name="match" type="list"
+                label="NR_MATCH"
+                description="NR_MATCH_DESC"
+                default="exists"
+                class="input-medium">
+                <option value="exists">NR_EXISTS</option>
+                <option value="equal">NR_IS_EQUAL</option>
+                <option value="contains">NR_CONTAINS</option>
+                <option value="starts">NR_STARTS_WITH</option>
+                <option value="ends">NR_ENDS_WITH</option>
+            </field>
+            <field name="content" type="text"
+                label="NR_ASSIGN_COOKIENAME_CONTENT"
+                description="NR_ASSIGN_COOKIENAME_CONTENT_DESC"
+                class="input-xlarge"
+                hint="NR_ASSIGN_COOKIENAME_CONTENT"
+                showon="match:equal,contains,starts,ends"
+            />
+        </fields>
+    </fieldset>
+</form>
+
+
+

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="contenttype">
+        <fields name="product">
+            <field name="headline" type="map"
+                label="NR_TITLE"
+                description="GSD_PRODUCT_HEADLINE_DESC"
+                hint="Apple iPhone 8 Plus"
+                default="gsd.item.headline"
+                custom_class="input-xlarge"
+                required="true"
+            />
+            <field name="description" type="map"
+                label="GSD_ITEM_DESC"
+                description="GSD_PRODUCT_TEXT_DESC"
+                default="gsd.item.description"
+                custom_class="input-xlarge"
+                required="true"
+            />
+            <field name="image" type="mapimage"
+                label="NR_IMAGE"
+                description="GSD_PRODUCT_IMAGE_DESC"
+                default="gsd.item.image"
+            />
+            <field name="rating_value" type="map"
+                label="GSD_RATE_VALUE"
+                description="GSD_RATE_VALUE_DESC"
+                default="gsd.item.ratingValue">
+                <subform>
+                    <field name="custom" type="nr_rate"/>
+                </subform>
+            </field>
+            <field name="review_count" type="map"
+                label="GSD_REVIEW_COUNT"
+                description="GSD_REVIEW_COUNT_DESC"
+                default="gsd.item.reviewCount"
+                hint="5"
+            />
+            <field name="sku" type="map"
+                label="SKU"
+                description="GSD_PRODUCT_SKU_DESC"
+                hint="ABC123"
+                default="gsd.item.sku"
+            />
+            <field name="mpn" type="map"
+                label="MPN"
+                description="GSD_PRODUCT_MPN_DESC"
+                hint="ABC123"
+                default="gsd.item.mpn"
+            />
+            <field name="brand" type="map"
+                label="GSD_PRODUCT_BRAND_NAME"
+                description="GSD_PRODUCT_BRAND_NAME_DESC"
+                hint="Apple"
+                default="gsd.item.brand"
+            />
+            <field name="offerPrice" type="map"
+                label="GSD_PRODUCT_OFFER_PRICE"
+                description="GSD_PRODUCT_OFFER_PRICE_DESC"
+                hint="29.50"
+                default="gsd.item.offerprice"
+            />
+            <field name="currency" type="map"
+                label="GSD_PRODUCT_OFFER_CURRENCY"
+                description="GSD_PRODUCT_OFFER_CURRENCY_DESC"
+                hint="USD"
+                default="gsd.item.currency">
+                <subform>
+                    <field name="fixed" type="nr_currencies"
+                        showon="option:fixed"
+                        showselect="false"
+                    />
+                </subform>
+            </field>
+            <field name="offerItemCondition" type="map"
+                label="GSD_PRODUCT_CONDITION"
+                description="GSD_PRODUCT_CONDITION_DESC">
+                <subform>
+                    <field name="fixed" type="list"
+                        showon="option:fixed">
+                        <option value="http://schema.org/NewCondition">GSD_PRODUCT_CONDITION_NEW</option>
+                        <option value="http://schema.org/UsedCondition">GSD_PRODUCT_CONDITION_USED</option>
+                        <option value="http://schema.org/DamagedCondition">GSD_PRODUCT_CONDITION_DAMAGED</option>
+                        <option value="http://schema.org/RefurbishedCondition">GSD_PRODUCT_CONDITION_REFURBISHED</option>
+                    </field>
+                </subform>
+            </field>
+            <field name="offerAvailability" type="map"
+                label="GSD_PRODUCT_AVAILABILITY"
+                description="GSD_PRODUCT_AVAILABILITY_DESC">
+                <subform>
+                    <field name="fixed" type="list"
+                        showon="option:fixed"
+                        default="http://schema.org/InStock">
+                        <option value="http://schema.org/Discontinued">GSD_AVAILABILITY_DISCONTINUED</option>
+                        <option value="http://schema.org/InStock">GSD_AVAILABILITY_IN_STOCK</option>
+                        <option value="http://schema.org/InStoreOnly">GSD_AVAILABILITY_INSTORE_ONLY</option>
+                        <option value="http://schema.org/LimitedAvailability">GSD_AVAILABILITY_LIMITED_AVAILABILITY</option>
+                        <option value="http://schema.org/OnlineOnly">GSD_AVAILABILITY_ONLINE_ONLY</option>
+                        <option value="http://schema.org/OutOfStock">GSD_AVAILABILITY_OUT_OF_STOCK</option>
+                        <option value="http://schema.org/PreOrder">GSD_AVAILABILITY_PRE_ORDER</option>
+                        <option value="http://schema.org/PreSale">GSD_AVAILABILITY_PRE_SALE</option>
+                        <option value="http://schema.org/SoldOut">GSD_AVAILABILITY_SOLDOUT</option>
+                    </field>
+                </subform>
+            </field>
+            <field name="priceValidUntil" type="mapdate"
+                label="GSD_PRODUCT_PRICE_VALID_DATE"
+                description="GSD_PRODUCT_PRICE_VALID_DATE_DESC"
+            />
+        </fields>
+    </fieldset>
+</form>

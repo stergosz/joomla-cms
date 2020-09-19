@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="contenttype">
+        <fields name="jobposting">
+            <field name="headline" type="map"
+                label="GSD_JOBPOSTING_TITLE"
+                description="GSD_JOBPOSTING_TITLE_DESC"
+                default="gsd.item.headline"
+                hint="Software Engineer"
+                custom_class="input-xlarge"
+                required="true"
+            />
+            <field name="description" type="map"
+                label="GSD_JOBPOSTING_DESCRIPTION"
+                description="GSD_JOBPOSTING_DESCRIPTION_DESC"
+                default="gsd.item.description"
+                hint="ABC Company Inc. seeks a full-time software engineer to develop in-house tools."
+                custom_class="input-xlarge"
+                required="true"
+            />
+            <field name="publish_up" type="mapdate"
+                label="GSD_JOBPOSTING_POSTED"
+                description="GSD_JOBPOSTING_POSTED_DESC"
+                default="gsd.item.publish_up"
+            />
+            <field name="educationRequirements" type="map"
+                label="GSD_JOBPOSTING_EDUCATION"
+                description="GSD_JOBPOSTING_EDUCATION_DESC"
+                hint="Bachelor's Degree in Computer Science"
+            />
+            <field name="industry" type="map"
+                label="GSD_JOBPOSTING_INDUSTRY"
+                description="GSD_JOBPOSTING_INDUSTRY_DESC"
+                hint="Computer Software"
+            />
+            <field name="valid_through" type="mapdate"
+                label="GSD_JOBPOSTING_VALID_THROUGH"
+                description="GSD_JOBPOSTING_VALID_THROUGH_DESC"
+            />
+            <field name="employmenttype" type="map"
+                label="GSD_JOBPOSTING_TYPE"
+                description="GSD_JOBPOSTING_TYPE_DESC">
+                <subform>
+                    <field name="fixed" type="list"
+                        multiple="true"
+                        showon="option:fixed">
+                        <option value="FULL_TIME">GSD_JOBPOSTING_FULLTIME</option>
+                        <option value="PART_TIME">GSD_JOBPOSTING_PARTTIME</option>
+                        <option value="CONTRACTOR">GSD_JOBPOSTING_CONTRACTOR</option>
+                        <option value="TEMPORARY">GSD_JOBPOSTING_TEMPORARY</option>
+                        <option value="INTERN">GSD_JOBPOSTING_INTERN</option>
+                        <option value="VOLUNTEER">GSD_JOBPOSTING_VOLUNTEER</option>
+                        <option value="PER_DIEM">GSD_JOBPOSTING_PERDIEM</option>
+                        <option value="OTHER">GSD_JOBPOSTING_OTHER</option>
+                    </field>
+                </subform>
+            </field>
+            <field type="spacer" name="label3" label="GSD_JOBPOSTING_HIRING_ORGANIZATION" />
+            <field name="hiring_oprganization_name" type="map"
+                label="GSD_JOBPOSTING_ORG_NAME"
+                description="GSD_JOBPOSTING_ORG_NAME_DESC"
+                hint="Wheel Company"
+                default="gsd.sitename"
+                required="true"
+            />
+            <field name="hiring_oprganization_url" type="map"
+                label="GSD_JOBPOSTING_ORG_URL"
+                description="GSD_JOBPOSTING_ORG_URL_DESC"
+                hint="http://"
+                default="gsd.siteurl"
+                required="true"
+            />
+            <field name="hiring_organization_logo" type="mapimage"
+                label="GSD_JOBPOSTING_ORG_LOGO"
+                description="GSD_JOBPOSTING_ORG_LOGO_DESC"
+                default="gsd.sitelogo"
+            />
+            <field type="spacer" name="label1" label="GSD_JOBPOSTING_SALARY" />
+            <field name="salary" type="map"
+                label="GSD_JOBPOSTING_SALARY"
+                description="GSD_JOBPOSTING_SALARY_DESC"
+                hint="50"
+            />
+            <field name="salary_unit" type="map"
+                label="GSD_JOBPOSTING_SALARY_UNIT"
+                description="GSD_JOBPOSTING_SALARY_UNIT_DESC">
+                <subform>
+                    <field name="fixed" type="list"
+                        showon="option:fixed">
+                        <option value="HOUR">GSD_HOUR</option>
+                        <option value="DAY">GSD_DAY</option>
+                        <option value="WEEK">GSD_WEEK</option>
+                        <option value="MONTH">GSD_MONTH</option>
+                        <option value="YEAR">GSD_YEAR</option>
+                    </field>
+                </subform>
+            </field>
+            <field name="currency" type="map"
+                label="GSD_JOBPOSTING_SALARY_CURRENCY"
+                description="GSD_JOBPOSTING_SALARY_CURRENCY_DESC"
+                hint="USD">
+                <subform>
+                    <field name="fixed" type="nr_currencies"
+                        showon="option:fixed"
+                        showselect="false"
+                    />
+                </subform>
+            </field>
+            <field type="spacer" name="label2" label="GSD_JOBPOSTING_LOCATION" />
+            <field name="addressCountry" type="map"
+                label="GSD_JOBPOSTING_COUNTRY"
+                description="GSD_JOBPOSTING_COUNTRY_DESC"
+                hint="US"
+                required="true">
+                <subform>
+                    <field name="fixed" type="nr_geo"
+                        showon="option:fixed"
+                        showselect="false"
+                    />
+                </subform>
+            </field>
+            <field name="streetAddress" type="map"
+                label="GSD_JOBPOSTING_ADDRESS"
+                description="GSD_JOBPOSTING_ADDRESS_DESC"
+                hint="555 Clancy St"
+                required="true"
+            />
+            <field name="locality" type="map"
+                label="GSD_JOBPOSTING_LOCALITY"
+                description="GSD_JOBPOSTING_LOCALITY_DESC"
+                hint="Mountain View"
+            />
+            <field name="region" type="map"
+                label="GSD_BUSINESSLISTING_ADDRESS_REGION"
+                description="GSD_JOBPOSTING_REGION_DESC"
+                hint="MI"
+            />
+            <field name="postal_code" type="map"
+                label="GSD_BUSINESSLISTING_POSTAL_CODE"
+                description="GSD_BUSINESSLISTING_POSTAL_CODE_DESC"
+                hint="48201"
+            />
+        </fields>
+    </fieldset>
+</form>

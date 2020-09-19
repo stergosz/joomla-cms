@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="assignments">
+        <!-- K2 Items -->
+        <fieldset name="k2_items">
+            <fields name="k2_items">
+                <field name="assignment_state" type="assignmentselection"
+                    label="NR_ASSIGN_K2_ITEMS"
+                    description="PLG_GSD_K2_ASSIGN_ITEM_DESC"
+                />
+                <field name="selection" type="componentitems"
+                    label="NR_SELECTION"
+                    description="PLG_GSD_K2_ASSIGN_ITEM_SELECTION_DESC"
+                    multiple="true"
+                    table="k2_items"
+                    column_state="published"
+                    where="'i.trash' = 0"
+                />
+            </fields>         
+        </fieldset>
+        <!-- K2 Categories -->
+        <fieldset name="k2_cats">
+            <fields name="k2_cats">
+                <field name="assignment_state" type="assignmentselection"
+                    label="NR_CATEGORIES"
+                    description="PLG_GSD_K2_ASSIGN_CATEGORY_DESC"
+                />
+                <field name="selection" type="nrk2" 
+                    label="NR_SELECTION" 
+                    description="NR_ASSIGN_CATEGORY_DESC"
+                    group="categories" 
+                    multiple="true" 
+                />
+                <fields name="params">
+    	            <field name="inc_children" type="list"
+    	                label="NR_ALSO_ON_CHILD_ITEMS"
+    	                description="NR_ALSO_ON_CHILD_ITEMS_DESC"
+    	                class="input-medium"
+    	                default="0">
+    	                <option value="0">JNO</option>
+    	                <option value="1">JYES</option>
+    	                <option value="2">NR_ONLY</option>
+    	            </field>
+            	</fields>
+            </fields>
+        </fieldset>
+		<!-- K2 Tags -->
+        <fieldset name="k2_tags">
+            <fields name="k2_tags">
+                <field name="assignment_state" type="assignmentselection"
+                    label="NR_TAG"
+                    description="PLG_GSD_K2_ASSIGN_TAGS_DESC"
+                />
+                <field name="selection" type="nrk2"
+                    label="NR_SELECTION"
+                    description="NR_ASSIGN_TAGS_DESC"
+                    group="tags"
+                    multiple="true"
+                />
+            </fields>
+        </fieldset>
+	</fields>
+</form>

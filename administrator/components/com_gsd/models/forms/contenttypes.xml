@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addons>
+    <addon name="articles"
+        label="GSD_ARTICLE"
+        description="GSD_ARTICLE_DESC"
+        docalias="article-schema"
+        proonly="false"
+        image="https://static.tassos.gr/images/galleries/gsdm/04.jpg"
+    />
+    <addon name="courses"
+        label="GSD_COURSE"
+        description="GSD_COURSE_DESC"
+        docalias="course-schema"
+        image="https://developers.google.com/search/docs/data-types/images/courses01.png"
+    />
+    <addon name="products"
+        label="GSD_PRODUCT"
+        description="GSD_PRODUCT_DESC"
+        docalias="product-schema"
+        image="https://static.tassos.gr/images/galleries/gsdm/05.jpg"
+    />
+    <addon name="events"
+        label="GSD_EVENT"
+        description="GSD_EVENT_DESC"
+        docalias="event-schema"
+        image="https://static.tassos.gr/images/galleries/gsdm/06.jpg"
+    />
+    <addon name="recipes"
+        label="GSD_RECIPE"
+        description="GSD_RECIPE_DESC"
+        docalias="recipe-schema"
+        image="https://static.tassos.gr/images/galleries/gsdm/07.jpg"
+    />
+    <addon name="reviews"
+        label="GSD_REVIEW"
+        description="GSD_REVIEW_DESC"
+        docalias="review-schema"
+        image="https://static.tassos.gr/images/galleries/gsdm/06.jpg"
+    />
+    <addon name="factchecks"
+        label="GSD_FACTCHECK"
+        description="GSD_FACTCHECK_DESC"
+        docalias="factcheck-schema"
+        image="https://developers.google.com/search/docs/data-types/images/factcheck-gallery.png"
+    />
+    <addon name="videos"
+        label="GSD_VIDEO"
+        description="GSD_VIDEOS_DESC"
+        docalias="video-schema"
+        image="https://developers.google.com/search/docs/data-types/images/video-imagesearch.png"
+    />
+    <addon name="jobposting"
+        label="Job Posting"
+        description="Improve the job seeking experience by adding job posting structured data to your job posting web pages."
+        docalias="jobposting-schema"
+        image="https://developers.google.com/search/docs/data-types/images/jobs-search-ui.png"
+    />
+    <addon name="faq"
+        label="GSD_FAQ"
+        description="GSD_FAQ_DESC"
+        docalias="faq-schema"
+        image="https://developers.google.com/search/docs/data-types/images/faqpage-searchresult.png"
+    />
+    <addon name="localbusiness"
+        label="GSD_LOCAL_BUSINESS"
+        description="GSD_LOCAL_BUSINESS_DESC"
+        docalias="localbusiness-schema"
+        image="https://developers.google.com/search/docs/data-types/images/local-business01.png"
+    />
+    <addon name="movie"
+        label="GSD_MOVIE"
+        description="GSD_MOVIE_DESC"
+        docalias="movie-schema"
+        image="https://developers.google.com/search/docs/data-types/images/movie-result.png"
+    />
+    <addon name="service"
+        label="GSD_SERVICE"
+        description="GSD_SERVICE_DESC"
+        docalias="service-schema"
+    />
+</addons>

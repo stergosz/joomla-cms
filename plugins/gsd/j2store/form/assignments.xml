@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="assignments">
+		<!-- Single -->
+		<fieldset name="single">
+			<fields name="j2storesingle">
+				<field name="assignment_state" type="assignmentselection" 
+					label="GSD_PRODUCT"
+					description="PLG_GSD_J2STORE_ASSIGN_PRODUCT_DESC"
+				/>
+				<field name="selection" type="componentitems" 
+					label="NR_SELECTION" 
+					description="PLG_GSD_J2STORE_ASSIGN_PRODUCT_SELECTION_DESC"
+					multiple="true"
+					table="j2store_products"
+					column_id="j2store_product_id"
+					column_title="c.title"
+					column_state="c.state"
+					where="i.product_source='com_content' AND c.state >= 0"
+					join="#__content as c ON i.product_source_id = c.id"
+				/>
+        	</fields>
+    	</fieldset>
+		<!-- Category -->
+		<fieldset name="category">
+			<fields name="j2storecategory">
+	            <field name="assignment_state" type="assignmentselection"
+	                label="NR_CATEGORIES"
+	                description="PLG_GSD_CONTENT_ASSIGN_CATEGORY_DESC"
+	            />
+	            <field name="selection" type="nr_content" 
+	                label="NR_SELECTION" 
+	                description="PLG_GSD_J2STORE_ASSIGN_CATEGORY_DESC"
+	                group="categories" 
+	                multiple="true" 
+	                default=""
+	            />
+	            <fields name="params">
+		            <field name="inc_children" type="list"
+		                label="NR_ALSO_ON_CHILD_ITEMS"
+		                description="NR_ALSO_ON_CHILD_ITEMS_DESC"
+		             	class="input-medium"
+		                default="0">
+		                <option value="0">JNO</option>
+		                <option value="1">JYES</option>
+		                <option value="2">NR_ONLY</option>
+		            </field>
+	        	</fields>
+        	</fields>
+    	</fieldset>
+	</fields>
+</form>

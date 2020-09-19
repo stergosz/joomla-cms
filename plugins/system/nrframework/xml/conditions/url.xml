@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general">
+        <field name="match" type="comparator"/>
+        <field name="value" type="textarea" 
+            label="NR_ASSIGN_URLS" 
+            description="NR_ASSIGN_URLS_DESC"
+            class="span12 input-full"
+            hint="/blog/welcome-to-our-site"
+            rows="5"
+        />
+        <fields name="params">
+            <field name="regex" type="list" 
+                label="NR_ASSIGN_URLS_REGEX" 
+                description="NR_ASSIGN_URLS_REGEX_DESC" 
+                filter="intval" 
+                class="input-small"
+                default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+            </field>
+        </fields>
+    </fieldset>
+</form>

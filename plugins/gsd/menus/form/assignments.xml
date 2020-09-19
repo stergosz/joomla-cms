@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="assignments">
+		<!-- Menu Item -->
+		<fieldset name="menu">
+	 		<fields name="menu">
+	            <field name="assignment_state" type="assignmentselection" 
+	                label="NR_MENU_ITEMS"
+	                description="PLG_GSD_MENUS_ASSIGN_MENU_DESC" 
+	            />
+	            <field name="selection" type="nrmenuitems"
+	                multiple="true" 
+	                label="NR_SELECTION" 
+	                description="PLG_GSD_MENUS_ASSIGN_MENU_SELECTION_DESC" 
+	            />
+	            <fields name="params">
+		            <field name="assign_menu_param_noitem" type="nrtoggle" 
+		                label="NR_ASSIGN_MENU_NOITEM" 
+		                description="NR_ASSIGN_MENU_NOITEM_DESC"
+					/> 
+		            <field name="assign_menu_param_inc_children" type="list" 
+		                label="NR_ASSIGN_MENU_CHILD" 
+		                description="NR_ASSIGN_MENU_CHILD_DESC" 
+		                filter="intval" 
+						class="input-medium"
+		                size="1" 
+		                default="0">
+		                <option value="0">JNO</option>
+		                <option value="1">JYES</option>
+		                <option value="2">JONLY</option>
+		            </field>
+	        	</fields>
+	        </fields>
+    	</fieldset>
+	</fields>
+</form>
+

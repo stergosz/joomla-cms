@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="gsd" method="upgrade">
+	<name>PLG_GSD_K2</name>
+	<description>PLG_GSD_K2_DESC</description>
+	<version>1.0</version>
+	<creationDate>May 2017</creationDate>
+	<author>Tassos Marinos</author>
+	<copyright>Copyright © 2018 Tassos Marinos All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>info@tassos.gr</authorEmail>
+	<authorUrl>http://www.tassos.gr</authorUrl>
+	<scriptfile>script.install.php</scriptfile>
+	<files>
+		<filename plugin="k2">k2.php</filename>
+		<filename>script.install.helper.php</filename>
+		<folder>language</folder>
+		<folder>form</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="plugins/system/nrframework/fields">
+	            <field name="fastedit" type="nrtoggle"
+	                label="GSD_ENABLE_FASTEDIT"
+	                description="PLG_GSD_K2_FASTEDIT_DESC"
+				/>
+				<field name="load_custom_fields" type="nrtoggle"
+	                label="GSD_LOAD_CUSTOM_FIELDS"
+	                description="GSD_LOAD_CUSTOM_FIELDS_DESC"
+				/>
+	            <field name="imagesize" type="list"
+	                label="PLG_GSD_K2_IMAGE_SIZE"
+	                description="PLG_GSD_K2_IMAGE_SIZE_DESC"
+	                class="input-medium"
+	                default="large">
+	                <option value="xsmall">XSmall</option>
+	                <option value="small">Small</option>
+	                <option value="medium">Medium</option>
+	                <option value="large">Large</option>
+	                <option value="xlarge">XLarge</option>
+	            </field>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

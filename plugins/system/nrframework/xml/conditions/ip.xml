@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general">
+        <field name="match" type="comparator"/>
+        <field name="value" type="textarea" 
+            label="NR_IPADDRESS" 
+            description="NR_ASSIGN_IP_ADDRESSES_DESC"
+            filter="raw"
+            class="span12 input-full"
+            rows="5"
+            hint="180.150.1.6"
+        />
+    </fieldset>
+</form>

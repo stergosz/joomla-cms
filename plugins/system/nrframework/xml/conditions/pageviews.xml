@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general">
+        <field name="match" type="comparator"/>
+        <field name="value" type="list"
+            label="NR_MATCH"
+            description="NR_MATCH_DESC"
+            class="input-medium">
+            <option value="exactly">NR_EXACTLY</option>
+            <option value="fewer">NR_FEWER_THAN</option>
+            <option value="greater">NR_GREATER_THAN</option>
+        </field>
+        <fields name="params">
+            <field name="views" type="number"
+                label="NR_ASSIGN_PAGEVIEWS_VIEWS" 
+                description="NR_ASSIGN_PAGEVIEWS_VIEWS_DESC"
+                filter="intval"
+                class="input-mini"
+                hint="3"
+                min="0"
+            />
+        </fields>
+    </fieldset>
+</form>

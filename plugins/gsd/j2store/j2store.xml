@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="gsd" method="upgrade">
+	<name>PLG_GSD_J2STORE</name>
+	<description>PLG_GSD_J2STORE_DESC</description>
+	<version>1.0</version>
+	<creationDate>July 2018</creationDate>
+	<author>Tassos Marinos</author>
+	<copyright>Copyright © 2018 Tassos Marinos All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>info@tassos.gr</authorEmail>
+	<authorUrl>http://www.tassos.gr</authorUrl>
+	<scriptfile>script.install.php</scriptfile>
+	<files>
+		<filename plugin="j2store">j2store.php</filename>
+		<filename>script.install.helper.php</filename>
+		<folder>language</folder>
+		<folder>form</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="plugins/system/nrframework/fields">
+	            <field name="removemicrodata" type="nrtoggle"
+	                label="GSD_REMOVE_MICRODATA2"
+	                description="PLG_GSD_J2STORE_REMOVE_MICRODATA_DESC"
+	                checked="true"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
