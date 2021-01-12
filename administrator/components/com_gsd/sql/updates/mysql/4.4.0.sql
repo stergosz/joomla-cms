@@ -1,1 +1,0 @@
-ALTER TABLE `#__gsd` ADD `language` VARCHAR(7) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '*' AFTER `ordering`;
